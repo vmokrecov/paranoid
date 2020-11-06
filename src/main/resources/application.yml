@@ -1,0 +1,22 @@
+paranoid:
+  logbook: true
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/paranoid
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: false
+  flyway:
+    enabled: true
+    encoding: UTF-8
+    locations: classpath:/db/migration/
+    validate-on-migrate: true
+    baseline-on-migrate: true
