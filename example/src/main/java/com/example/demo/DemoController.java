@@ -13,6 +13,6 @@ public class DemoController {
 
     @GetMapping("/get")
     public String firstMS() {
-        return "Demo called....";
+        return "Demo called...";
     }
 }
